@@ -7,7 +7,7 @@ const About = () => {
         {/* Left: Image */}
         <div className="flex-shrink-0">
           <img
-            src="/Me.JPG"  // or import me from "../assets/me.jpg"
+            src="/Me.JPG"  
             alt="me"
             className="w-48 h-48 rounded-full shadow-lg object-cover"
           />

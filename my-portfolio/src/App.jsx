@@ -1,30 +1,30 @@
+import React from "react";
 
-import { Routes, Route } from "react-router-dom";
-import Navbar from "./component/Navbar.jsx";
-import About from "./pages/About.jsx";
-import Projects from "./pages/Projects.jsx";
-import Contact from "./pages/Contact.jsx";
-import Skills from "./pages/Skills.jsx";
+import Navbar from "./component/Navbar";
+import Hero from "./component/Hero";
+import About from "./component/About"; 
+import Skills from "./pages/Skills";
+import Projects from "./pages/Projects";
+import Contact from "./pages/Contact";
 
-
-
-
-
-
-export default function App() {
+function App() {
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="scroll-smooth bg-gray-900 text-gray-200">
+      {/* Navbar */}
       <Navbar />
-      <div className="p-8">
-        <Routes>
-          <Route path="/" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/skills" element={<Skills/>} />
-          
-          
-        </Routes>
-      </div>
+
+      {/* Hero Section */}
+      <Hero />
+
+      {/* About Section */}
+      <About />
+
+      {/* Main Sections */}
+      <Skills />
+      <Projects />
+      <Contact />
     </div>
   );
 }
+
+export default App;

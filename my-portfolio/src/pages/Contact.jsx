@@ -1,25 +1,101 @@
-import { useState } from "react";
+// import React from "react";
+
+// export default function Contact() {
+//   return (
+//     <section
+//       id="contact"
+//       className="min-h-screen flex flex-col justify-center items-center p-8 bg-gray-800"
+//     >
+//       <h2 className="text-5xl font-bold mb-10 text-white">Contact Me</h2>
+//       <form className="flex flex-col w-full max-w-md gap-4 bg-gray-900 p-8 rounded-2xl shadow-lg">
+//         <input
+//           type="text"
+//           placeholder="Your Name"
+//           className="p-4 border border-gray-700 rounded-xl bg-gray-800 text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none"
+//         />
+//         <input
+//           type="email"
+//           placeholder="Your Email"
+//           className="p-4 border border-gray-700 rounded-xl bg-gray-800 text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none"
+//         />
+//         <textarea
+//           placeholder="Your Message"
+//           className="p-4 border border-gray-700 rounded-xl bg-gray-800 text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none"
+//           rows="5"
+//         ></textarea>
+//         <button
+//           type="submit"
+//           className="bg-primary text-white p-4 rounded-xl font-semibold hover:bg-secondary transition-all duration-300 shadow-md"
+//         >
+//           Send Message
+//         </button>
+//       </form>
+//     </section>
+//   );
+// }
+
+
+import React from "react";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 export default function Contact() {
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
-
-  const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert("Message sent!");
-    setFormData({ name: "", email: "", message: "" });
-  };
-
   return (
-    <div className="max-w-md mx-auto mt-10 text-center">
-      <h1 className="text-4xl font-bold mb-4">Contact Me</h1>
-      <form className="space-y-4" onSubmit={handleSubmit}>
-        <input type="text" name="name" placeholder="Name" value={formData.name} onChange={handleChange} className="w-full p-2 border rounded" required />
-        <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} className="w-full p-2 border rounded" required />
-        <textarea name="message" placeholder="Message" value={formData.message} onChange={handleChange} className="w-full p-2 border rounded" required />
-        <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Send</button>
+    <section
+      id="contact"
+      className="min-h-screen flex flex-col justify-center items-center p-8 bg-gray-800"
+    >
+      <h2 className="text-5xl font-bold mb-10 text-white">Contact Me</h2>
+      <form className="flex flex-col w-full max-w-md gap-4 bg-gray-900 p-8 rounded-2xl shadow-lg">
+        <input
+          type="text"
+          placeholder="Your Name"
+          className="p-4 border border-gray-700 rounded-xl bg-gray-800 text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none"
+        />
+        <input
+          type="email"
+          placeholder="Your Email"
+          className="p-4 border border-gray-700 rounded-xl bg-gray-800 text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none"
+        />
+        <textarea
+          placeholder="Your Message"
+          className="p-4 border border-gray-700 rounded-xl bg-gray-800 text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none"
+          rows="5"
+        ></textarea>
+        <button
+          type="submit"
+          className="bg-primary text-white p-4 rounded-xl font-semibold hover:bg-secondary transition-all duration-300 shadow-md"
+        >
+          Send Message
+        </button>
       </form>
-    </div>
+
+      {/* Social Links Section */}
+      <div className="flex gap-6 mt-10 text-white text-3xl">
+        <a
+          href="mailto:abdulahihussein345@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-primary transition-all duration-300"
+        >
+          <FaEnvelope />
+        </a>
+        <a
+          href="https://github.com/Abdul1678"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-primary transition-all duration-300"
+        >
+          <FaGithub />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/abdulahi-hussein-943309196/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-primary transition-all duration-300"
+        >
+          <FaLinkedin />
+        </a>
+      </div>
+    </section>
   );
 }
