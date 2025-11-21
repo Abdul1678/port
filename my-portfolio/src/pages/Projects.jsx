@@ -41,7 +41,7 @@ const projects = [
   {
     name: "Donezo",
     description: "The project consist with backend which also connect to supabase using Prisma and The frontend is a single React Paget connects to Supabase via it's Authentication service and does have a Supabase Client initialized.",
-    link: "https://github.com/Abdul1678/Deen.git"
+    link: "https://cozy-haupia-e0fbe9.netlify.app/login"
   },
   {
     name: "Video Game Backlogger",
